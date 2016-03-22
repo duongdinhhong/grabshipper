@@ -13,6 +13,7 @@
 #import "SCLAlertView.h"
 #import "Validation.h"
 #import "GSAlertView.h"
+#import "MBProgressHUD.h"
 
 @interface GSSellerRegisterViewController ()
 
@@ -128,6 +129,12 @@
     return errorCode;
 }
 
+#pragma mark - Show and Hide activity indicator
+- (void)showLoadingViewBehindWithTitle {
+    
+}
+
+
 #pragma mark - Actions
 - (IBAction)backButtonClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
@@ -142,6 +149,23 @@
  6: Username already exists
  */
 - (IBAction)signUp:(id)sender {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view.window animated:YES];
+
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        
+        // Do something useful in the background
+        [self signUpInBackground];
+        
+        // IMPORTANT - Dispatch back to the main thread. Always access UI
+        // classes (including MBProgressHUD) on the main thread.
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
+        });
+    });
+}
+
+#pragma mark - backgrounded sign up
+- (void)signUpInBackground {
     NSInteger errorCode = [self validateValues];
     NSString *error = @"";
     if (errorCode == 0) {

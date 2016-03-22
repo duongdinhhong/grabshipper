@@ -57,6 +57,10 @@
 		989434E01C7864E80062E872 /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 989434DC1C7864E80062E872 /* SCLButton.m */; };
 		98A2F8621C8693DF00795DB7 /* GSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A2F8601C8693DF00795DB7 /* GSHomeViewController.m */; };
 		98A2F8631C8693DF00795DB7 /* GSHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A2F8611C8693DF00795DB7 /* GSHomeViewController.xib */; };
+		98D915121CA0FD39002DF935 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D915111CA0FD39002DF935 /* MBProgressHUD.m */; };
+		98D915141CA0FF80002DF935 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D915131CA0FF80002DF935 /* Foundation.framework */; };
+		98D915161CA0FF8E002DF935 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D915151CA0FF8E002DF935 /* UIKit.framework */; };
+		98D915181CA0FF99002DF935 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D915171CA0FF99002DF935 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -318,6 +322,11 @@
 		98A2F85F1C8693DF00795DB7 /* GSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHomeViewController.h; sourceTree = "<group>"; };
 		98A2F8601C8693DF00795DB7 /* GSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHomeViewController.m; sourceTree = "<group>"; };
 		98A2F8611C8693DF00795DB7 /* GSHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSHomeViewController.xib; sourceTree = "<group>"; };
+		98D915101CA0FD39002DF935 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		98D915111CA0FD39002DF935 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		98D915131CA0FF80002DF935 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		98D915151CA0FF8E002DF935 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		98D915171CA0FF99002DF935 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +334,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98D915181CA0FF99002DF935 /* CoreGraphics.framework in Frameworks */,
+				98D915161CA0FF8E002DF935 /* UIKit.framework in Frameworks */,
+				98D915141CA0FF80002DF935 /* Foundation.framework in Frameworks */,
 				983C723E1C7DF281001E3E0A /* libavutil.a in Frameworks */,
 				983C723C1C7DF281001E3E0A /* libavfilter.a in Frameworks */,
 				983C723F1C7DF281001E3E0A /* libswscale.a in Frameworks */,
@@ -433,6 +445,7 @@
 		983001BE1C785807006DED5A /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				98D915091CA0F383002DF935 /* ActivityIndicator */,
 				985184B21C8AD4F6006BCF75 /* Alert */,
 				986235C41C8886F500FE412D /* Validation */,
 				989434D41C7864E80062E872 /* SCLAlertView */,
@@ -502,6 +515,9 @@
 		983001CA1C785BA5006DED5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				98D915171CA0FF99002DF935 /* CoreGraphics.framework */,
+				98D915151CA0FF8E002DF935 /* UIKit.framework */,
+				98D915131CA0FF80002DF935 /* Foundation.framework */,
 				983C72471C7DFD91001E3E0A /* FBSDKLoginKit.framework */,
 				983C72431C7DFB08001E3E0A /* FBSDKCoreKit.framework */,
 				983C71691C7DF238001E3E0A /* libz.tbd */,
@@ -968,6 +984,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		98D915091CA0F383002DF935 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				98D915101CA0FD39002DF935 /* MBProgressHUD.h */,
+				98D915111CA0FD39002DF935 /* MBProgressHUD.m */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1092,6 +1117,7 @@
 				989434DF1C7864E80062E872 /* SCLAlertViewStyleKit.m in Sources */,
 				983C724C1C7E0B3D001E3E0A /* GSLoginViewController.m in Sources */,
 				9830019D1C785356006DED5A /* GrabShipperAppDelegate.m in Sources */,
+				98D915121CA0FD39002DF935 /* MBProgressHUD.m in Sources */,
 				98A2F8621C8693DF00795DB7 /* GSHomeViewController.m in Sources */,
 				982D5A071C8002AD003CAEDD /* GSResponse.m in Sources */,
 				989434E01C7864E80062E872 /* SCLButton.m in Sources */,
